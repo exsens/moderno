@@ -2,6 +2,7 @@
 @import '_global';
 @import '_fonts';
 
+// <---------HEADER-------->
 .header__top-inner {
     display: flex;
     justify-content: space-between;
@@ -25,13 +26,6 @@
         color: $red;
     }
 }
-
-.header__phone {}
-
-.header__box {}
-
-.basket {}
-
 .header__btn {
     padding: 4px;
     width: 72px;
@@ -40,9 +34,11 @@
     text-align: center;
     font-size: 12px;
 }
+
 .header__btn:focus {
     border: 1px solid green;
 }
+
 .header__btn-login {
     background-color: $green;
     margin-right: 3px;
@@ -78,6 +74,9 @@
     }
 }
 
+// <---------HEADER-------->
+
+// <---------SEARCH-------->
 .search {
     background-repeat: no-repeat;
     background-size: cover;
@@ -94,6 +93,7 @@
             width: 100%;
             margin: 0 auto;
             position: relative;
+
             input {
                 display: block;
                 width: 100%;
@@ -103,20 +103,23 @@
                 font-size: 14px;
                 font-weight: 500;
                 padding: 0 60px 0 25px;
+
                 &:focus {
                     border: 1px solid green;
                 }
+
                 &::placeholder {
                     color: #90a4ae;
                 }
             }
         }
+
         button {
             position: absolute;
             right: 12px;
             top: 50%;
             z-index: 5;
-            transform: translate(0,-50%)
+            transform: translate(0, -50%)
         }
     }
 
@@ -133,3 +136,142 @@
         margin-bottom: 50px;
     }
 }
+
+// <---------SEARCH-------->
+
+// <---------PRODUCTS-------->
+.products {
+    background-color: $greybg;
+    padding: 110px 0;
+}
+
+.products_title {
+    text-align: center;
+    margin-bottom: 56px;
+}
+.title {
+    font-size: 36px;
+    font-weight: 700;
+    color: $bgdark;
+    line-height: 1;
+}
+.products__inner-btn {
+    text-align: center;
+    margin-bottom: 56px;
+
+    button {
+        padding: 10px 20px;
+        background-color: #fff;
+        color: $bgdark;
+        font-size: 14px;
+        text-align: center;
+        transition: all .3s linear;
+
+        &.mixitup-control-active {
+            color: #fff;
+            background-color: $red;
+        }
+        &+button {
+            margin-left: 2px;
+        }
+    }
+}
+
+                                  // box-items maxitUP
+.products__inner-box {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 43px;
+}
+.products__item {
+    box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
+    max-width: 442px;
+    background-color: #fff;
+    margin-bottom: 30px;
+}
+.products__item-img {
+    min-height: 250px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.products__item-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    min-height: 86px;
+    align-items: center;
+    border-bottom: 1px solid $border;
+    ;
+    color: $bgdark;
+}
+.products__item-name {
+    max-width: 310px;
+    font-weight: 500;
+
+    a {
+        display: block;
+    }
+}
+.products__item-title {
+    font-size: 18px;
+    margin-bottom: 9px;
+}
+.products__item-category {
+    font-size: 14px;
+    color: $green;
+}
+.products__item-price {
+    font-size: 20px;
+    font-weight: 700;
+}
+.products__item-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    min-height: 70px;
+    align-items: center;
+}
+.products__item-author {
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    span {
+        display: inline-flex;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        overflow: hidden;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-right: 10px;
+    }
+}
+.products__item-star {
+    font-size: 12px;
+    span {
+        color: $bgdark;
+        font-weight: 500;
+    }
+}
+.products__bottom-btn {
+    text-align: center;
+    button {
+        margin: 0 4px;
+        background-color: #fff;
+        padding: 17px 32px;
+        box-shadow: 0px 1px 3px 0px rgba(204, 216, 228, 0.75);
+        font-size: 16px;
+        color: $bgdark;
+        transition: all .3s linear;
+        &.mixitup-control-active {
+            color: #fff;
+            background-color: $red;
+        }
+    }
+}
+
+// <---------PRODUCTS-------->
