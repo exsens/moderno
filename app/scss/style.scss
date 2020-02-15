@@ -301,6 +301,7 @@
     text-align: center;
     margin-bottom: 50px;
 }
+
 .products__slider-dots {
     margin-top: 33px;
     text-align: center;
@@ -322,6 +323,74 @@
             background-color: #8bc34a;
         }
     }
+
+    button {
+        outline: none;
+    }
 }
 
 // <---------SLIDER-PRODUCTS-------->
+
+// <---------ADVANTAGES-------->
+.advantages {
+    background-color: $bgdark;
+    text-align: center;
+    padding: 120px 0;
+
+    &__title {
+        color: #fff;
+        margin-bottom: 80px;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    &__item {
+        max-width: 370px;
+        width: 100%;
+        text-align: center;
+        
+        &-icon {
+            width: 114px;
+            height: 114px;
+            background-color: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 30px;
+            transition: all .2s linear;
+            & path {
+                transition: all .2s linear;
+            }
+        }
+
+        &-title {
+            color: #fff;
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 25px;
+            transition: all .2s linear;
+        }
+        &:hover &-icon {
+            background-color: $green;
+        }
+        &:hover &-title {
+            color: $green;
+        }
+        &:hover &-icon path{
+            
+                fill: #fff;
+            
+        }
+
+        &-text {
+            color: #b0bec5;
+        }
+    }
+}
+
+// <---------ADVANTAGES-------->

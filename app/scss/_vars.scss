@@ -4,3 +4,10 @@ $green: #8bc34a;
 $bgdark: #263238;
 $greybg: #f4f6f5;
 $border: #ebeeef;
+
+@mixin background {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
