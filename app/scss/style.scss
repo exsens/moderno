@@ -26,6 +26,7 @@
         color: $red;
     }
 }
+
 .header__btn {
     padding: 4px;
     width: 72px;
@@ -149,12 +150,7 @@
     text-align: center;
     margin-bottom: 56px;
 }
-.title {
-    font-size: 36px;
-    font-weight: 700;
-    color: $bgdark;
-    line-height: 1;
-}
+
 .products__inner-btn {
     text-align: center;
     margin-bottom: 56px;
@@ -171,24 +167,29 @@
             color: #fff;
             background-color: $red;
         }
+
         &+button {
             margin-left: 2px;
         }
     }
 }
 
-                                  // box-items maxitUP
+// box-items maxitUP
 .products__inner-box {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin-bottom: 43px;
 }
+
 .products__item {
     box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
     max-width: 442px;
+    width: 100%;
     background-color: #fff;
     margin-bottom: 30px;
 }
+
 .products__item-img {
     min-height: 250px;
     width: 100%;
@@ -196,6 +197,7 @@
     background-repeat: no-repeat;
     background-position: center;
 }
+
 .products__item-content {
     display: flex;
     justify-content: space-between;
@@ -206,6 +208,7 @@
     ;
     color: $bgdark;
 }
+
 .products__item-name {
     max-width: 310px;
     font-weight: 500;
@@ -214,18 +217,22 @@
         display: block;
     }
 }
+
 .products__item-title {
     font-size: 18px;
     margin-bottom: 9px;
 }
+
 .products__item-category {
     font-size: 14px;
     color: $green;
 }
+
 .products__item-price {
     font-size: 20px;
     font-weight: 700;
 }
+
 .products__item-info {
     display: flex;
     justify-content: space-between;
@@ -233,11 +240,14 @@
     min-height: 70px;
     align-items: center;
 }
+
 .products__item-author {
     font-size: 14px;
     font-weight: 500;
     display: flex;
     align-items: center;
+    max-width: 250px;
+
     span {
         display: inline-flex;
         width: 30px;
@@ -250,15 +260,21 @@
         margin-right: 10px;
     }
 }
+
 .products__item-star {
+    display: flex;
+    align-items: center;
     font-size: 12px;
+
     span {
         color: $bgdark;
         font-weight: 500;
     }
 }
+
 .products__bottom-btn {
     text-align: center;
+
     button {
         margin: 0 4px;
         background-color: #fff;
@@ -267,6 +283,7 @@
         font-size: 16px;
         color: $bgdark;
         transition: all .3s linear;
+
         &.mixitup-control-active {
             color: #fff;
             background-color: $red;
@@ -275,3 +292,36 @@
 }
 
 // <---------PRODUCTS-------->
+// <---------SLIDER-PRODUCTS-------->
+.slider-products {
+    padding: 120px 0;
+}
+
+.slider-products__title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.products__slider-dots {
+    margin-top: 33px;
+    text-align: center;
+
+    li {
+        font-size: 0;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background-color: rgb(232, 232, 232);
+        display: inline-block;
+        transition: all .2 linear;
+
+        &+li {
+            margin-left: 7px;
+        }
+
+        &.slick-active {
+            background-color: #8bc34a;
+        }
+    }
+}
+
+// <---------SLIDER-PRODUCTS-------->

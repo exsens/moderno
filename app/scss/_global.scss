@@ -53,3 +53,13 @@ body {
      padding: 0 15px;
     }
 }
+.title {
+    font-size: 36px;
+    font-weight: 700;
+    color: $bgdark;
+    line-height: 1;
+}
+.rate-star {
+    display: inline-block;
+    margin-right: 12px;
+}
