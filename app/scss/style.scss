@@ -5,6 +5,7 @@
 // <---------HEADER-------->
 header {
     background-color: #ffffff;
+
 }
 
 .header__top-inner {
@@ -49,7 +50,20 @@ header {
     margin-right: 3px;
 }
 
-.header__btn-register {
+.header__btn-login--off {
+    display: none;
+}
+
+.header__btn-logout {
+    display: none;
+
+    &.header__btn-login--on {
+        display: block;
+    }
+}
+
+.header__btn-register,
+.header__btn-logout {
     background-color: $red;
 }
 
@@ -78,9 +92,286 @@ header {
         font-weight: 500;
     }
 }
-.header__circle {
-    
+
+.header__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
+.header__btn-menu {
+    display: none;
+}
+
+.header__circle {
+    display: none;
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    position: relative;
+
+    &.active {
+        display: block;
+    }
+
+    &::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 14px;
+        color: #a0a0a0;
+    }
+
+    span {
+        font-family: 'Roboto', sans-serif;
+        position: absolute;
+        top: -7px;
+        right: -7px;
+        background-color: $green;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        color: #fff;
+        line-height: 18px;
+        text-align: center;
+        font-size: 11px;
+    }
+}
+
+.notifacation {
+    span {
+        background-color: #fcb322;
+    }
+}
+
+.message {
+    span {
+        background-color: $tomatto;
+    }
+}
+.notifacation__menu,
+.message__menu {
+    .circle__images {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    }
+}
+.basket {
+    span {
+        background-color: $green;
+    }
+}
+.basket__sum {
+    padding: 0px 15px 10px;
+    width: 100%;
+    text-align: center;
+    &-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: $bgdark;
+        line-height: 24px;
+        display: flex;
+        justify-content: space-between;
+        padding: 13px 22px 13px 11px;
+    }
+}
+.basket__btn {
+    min-width: 105px;
+    height: 35px;
+    background-color: $green;
+    text-align: center;
+    line-height: 35px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    &-checkout {
+        padding: 0px 13px;
+        background-color: $red;
+        margin-left: 3px;
+    }
+}
+
+.circle {
+    &__menu {
+        border: 1px solid rgb(204, 204, 204);
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        top: 90px;
+        right: -20px;
+        z-index: 5;
+        min-width: 270px;
+    }
+
+    &__item {
+        display: flex;
+        width: 100%;
+        padding: 20px 25px 25px;
+        border-bottom: 1px solid rgb(204, 204, 204);
+        align-items: center;
+        position: relative;
+        &::before {
+            position: absolute;
+            top: 28px;
+            right: 21px;
+            transform: translate(-50%,-50%);
+            font-size: 16px;
+            color: #b0bec5;
+        } 
+    }
+
+    &__images {
+        width: 73px;
+        height: 57px;
+        margin-right: 15px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        
+    }
+
+    &__info {
+        font-family: 'Roboto', sans-serif;
+        line-height: 1;
+        &-name {
+            font-weight: 500;
+            color: $bgdark;
+            margin-bottom: 7px;
+            width: 125px;
+        }
+
+        &-category {
+            font-size: 12px;
+            color: $green;
+            margin-bottom: 7px;
+        }
+
+        &-price {
+            font-size: 16px;
+            color: #000;
+            font-weight: 500;
+        }
+        &-data {
+            color: #707070;
+            font-size: 10px;
+        }
+    }
+}
+
+
+
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__img {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 13px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+    }
+
+    &__info {
+        padding-right: 25px;
+        position: relative;
+
+        ::after {
+            content: "\f107";
+            font-family: 'icomoon';
+            font-size: 16px;
+            color: #707070;
+            position: absolute;
+            top: 7px;
+            right: 0;
+            transform: scale(0);
+            transition: all .2s linear;
+        }
+    }
+
+    &__name {
+        font-size: 14px;
+        line-height: 1;
+        color: #222;
+        margin-bottom: 6px;
+    }
+
+    &__money {
+        font-size: 14px;
+        font-weight: 700;
+        color: $green;
+        line-height: 1;
+    }
+    &__menu {
+        border: 1px solid rgb(204, 204, 204);
+        background-color: rgb(255, 255, 255);
+        max-width: 158px;
+        width: 100%;
+        position: absolute;
+        top: 90px;
+        left: 0px;
+        
+        padding: 20px 20px 5px;
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: $text;
+            font-size: 12px;
+            line-height: 1;
+            padding: 6px 0 6px 15px;
+        }
+
+    }
+}
+.notifacation__menu,
+.message__menu,
+.basket__menu,
+.user__menu
+ {
+    position: absolute;
+    transform: scale(0);
+    transition: all .2s linear;
+    overflow: hidden;
+    z-index: 2;
+
+}
+.user-box:hover .user__menu {
+    transform: scale(1);
+}
+
+.basket-box,
+.message-box,
+.notifacation-box,
+.user-box {
+        position: relative;
+        padding: 28px 0px;
+        margin-right: 25px;
+        &:hover .circle__menu {
+            transform: scale(1);
+        }
+        &:hover .header__circle::before {
+            color: $bgdark;
+        }
+}
+.icons-color::before {
+    color: $tomatto;
+}
+
 // <---------HEADER-------->
 
 // <---------SEARCH-------->
@@ -547,6 +838,7 @@ header {
 
 .footer__col-loc,
 .footer__col-tel {
+    display: block;
     font-size: 14px;
     color: #fff;
     padding-left: 30px;
@@ -857,64 +1149,62 @@ header {
     }
 }
 
-.product-page__aside {
+.product-page__content .products__item-img {
+    min-height: 120px;
+    height: auto;
+}
 
-    .products__item-img {
-        min-height: 120px;
+.product-page__content .products__item {
+
+    border: none;
+    box-shadow: none;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 0px;
+    border-bottom: 1px solid #dde3e8;
+
+    &-content {
+        padding: 0;
+        min-height: 75px;
+        border: none;
     }
 
-    .products__item {
+    &-info {
+        padding: 0;
+        min-height: 0;
+    }
 
-        border: none;
-        box-shadow: none;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        padding-bottom: 30px;
-        border-bottom: 1px solid #dde3e8;
+    &-title {
+        font-size: 16px;
+    }
 
-        &-content {
-            padding: 0;
-            min-height: 75px;
-            border: none;
-        }
+    &-price {
+        font-size: 16px;
+    }
 
-        &-info {
-            padding: 0;
-            min-height: 0;
-        }
+    &-category {
+        margin-bottom: 15px;
+    }
 
-        &-title {
-            font-size: 16px;
-        }
+    &-star {
+        margin-right: 0;
+        margin-left: auto;
 
-        &-price {
-            font-size: 16px;
-        }
-
-        &-category {
-            margin-bottom: 15px;
-        }
-
-        &-star {
+        .rate-star {
             margin-right: 0;
-            margin-left: auto;
-
-            .rate-star {
-                margin-right: 0;
-            }
         }
+    }
 
-        &-author {
-            max-width: 125px;
+    &-author {
+        max-width: 125px;
 
-            span {
-                min-width: 30px;
-            }
+        span {
+            min-width: 30px;
         }
+    }
 
-        .jq-ry-container {
-            padding: 0;
-        }
+    .jq-ry-container {
+        padding: 0;
     }
 }
 
@@ -981,7 +1271,7 @@ header {
 
     .products__item {
         max-width: 270px;
-        
+
 
         &-img {
             min-height: 180px;
@@ -1056,9 +1346,11 @@ header {
 .products__item-text {
     display: none;
 }
-.rate-icons { 
+
+.rate-icons {
     display: none;
 }
+
 .products__item-price {
     span {
         display: none;
@@ -1073,30 +1365,34 @@ header {
             &-content {
                 padding: 20px 25px 20px 30px;
             }
+
             &-img {
                 width: 240px;
                 float: left;
                 height: 100%;
             }
+
             &-title {
                 margin-bottom: 0px;
-                h3
-                {
-                font-size: 16px;
-                font-weight: 500;
+
+                h3 {
+                    font-size: 16px;
+                    font-weight: 500;
+                }
             }
-            }
+
             &-name {
                 max-width: 380px;
                 width: 100%;
             }
+
             &-text {
                 display: block;
                 font-size: 14px;
                 color: #70838d;
                 margin-top: 12px;
                 line-height: 18px;
-                
+
             }
 
             &-price {
@@ -1104,36 +1400,41 @@ header {
                 font-weight: 700;
                 text-align: right;
                 margin: 15px 0 0;
+
                 span {
                     display: block;
                     font-size: 13px;
                     font-weight: 400;
                     color: #aeb4bb;
                     margin-top: 20px;
-                    
+
                 }
             }
-            
+
             &-info {
                 padding: 10px 25px;
             }
+
             &-star {
                 i {
-                    padding:0 15px 0 16px;
+                    padding: 0 15px 0 16px;
                     color: $green;
                     font-size: 16px;
                     border-left: 1px solid #d1d4d8;
                 }
             }
-            
+
         }
+
         .rate-icons {
             display: flex;
             align-items: center;
             margin-left: 30px;
+
             .icon-comment-o {
                 padding-right: 13px;
             }
+
             a {
                 display: flex;
                 align-items: center;
@@ -1144,3 +1445,4 @@ header {
 }
 
 // <---------Product-page End------->
+@import "_media";

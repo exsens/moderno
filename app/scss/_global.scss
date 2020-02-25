@@ -72,6 +72,7 @@ body {
     font-size: 15px;
     line-height: 24px;
     color: $text;
+    overflow-x: hidden;
 }
 
 .container {
@@ -134,5 +135,20 @@ body {
         a {
             color: #b0bec5;
         }
+    }
+}
+.angle-right {
+    position: relative;
+    padding-left: 15px;
+
+    &::before {
+        font-family: 'icomoon';
+        content: "\f105";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(0 , -50%);
+        color: $green;
+        font-size: 14px;
     }
 }

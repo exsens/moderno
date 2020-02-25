@@ -40,6 +40,29 @@ $(function(){
 
     });
 
+    // $('.brg-menu').click(function(event){
+    //     $('.brg-menu').toggleClass('active')
+    //     $('.nav-menu__list').toggleClass('active')
+    // });
+    $('.brg-menu').on('click', function(){
+        $('.nav-menu__list').addClass('active');
+        $('.brg-menu--close').addClass('active');
+        $('.header__box').removeClass('active');
+        $('.header_logo').removeClass('hidden');
+
+    });
+    $('.brg-menu--close').on('click',function(){
+        $('.nav-menu__list').removeClass('active');
+    });
+
+    $('.header__btn-menu').click(function(event){
+        $('.header__btn-menu').toggleClass('active');
+        $('.header__box').toggleClass('active');
+        $('.header_logo').toggleClass('hidden');
+        $('.nav-menu__list').removeClass('active');
+        $('.brg-menu').toggleClass('hidden');
+       
+    });
 
     var mixer = mixitup('.products__inner-box');
     
