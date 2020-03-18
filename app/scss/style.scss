@@ -2015,6 +2015,99 @@ header {
 }
 
 // <---------product-one End------->
+  
+// <---------page-404 start------->
+.page-404 {
+    &__wrapper {
+        border: 1px solid $line;
+        border-bottom: none;
+        margin-bottom: 150px;
+    }
+    &__top {
+        padding: 0 28px;
+        min-height: 70px;
+        font-size: 24px;
+        font-weight: 500;
+        color: #444;
+        border-bottom: 1px solid $line;
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+    }
+    &__content {
+        padding: 110px 0 100px;
+        background-color: $green;
+        text-align: center;
+        font-family: 'Open-sans', sans-serif;
+        color: #fff;
+    }
+    &__title {
+        font-size: 300px;
+        line-height: 1;
+        font-weight: 800;
+        background-image: url(../images/404.png);
+        background-repeat: no-repeat;
+        background-position: right;
+        padding-right: 185px;
+        max-width: 770px;
+        width: 100%;
+        margin: 0 auto 25px;
+
+    }
+    &__subtitle {
+        font-size: 30px;
+        letter-spacing: 5px;
+        max-width: 500px;
+        margin: 0 auto 25px;
+    }
+    &__text {
+        font-family: 'Raleway', sans-serif;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 500;
+        max-width: 535px;
+        margin: 0 auto 55px;
+    }
+    &__link {
+        border: 2px solid #fff;
+        border-radius: 4px;
+        padding: 13px 45px 13px 30px;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+}
+
+// <---------page-404 End------->
+
+// <---------About-page start------->
+
+.about-page {
+    &__wrapper {
+        border-bottom: 1px solid $line;
+    }
+    &__content {
+        background-color: #fff;
+        padding: 40px 50px;
+    }
+    &__title {
+        font-size: 20px;
+        font-weight: 700;
+        color: #444;
+
+    }
+    &__text {
+        color: $c70;
+        font-size: 15px;
+        margin-bottom: 50px;
+    }
+
+
+}
+
+// <---------About-page End------->
+
+
+
 
 
 
