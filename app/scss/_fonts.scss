@@ -11,11 +11,11 @@
 
    @font-face {
     font-family: 'icomoon';
-    src:  url('../fonts/icomoon.eot?14018q');
-    src:  url('../fonts/icomoon.eot?14018q#iefix') format('embedded-opentype'),
-      url('../fonts/icomoon.ttf?14018q') format('truetype'),
-      url('../fonts/icomoon.woff?14018q') format('woff'),
-      url('../fonts/icomoon.svg?14018q#icomoon') format('svg');
+    src:  url('../fonts/icomoon.eot?65zvnb');
+    src:  url('../fonts/icomoon.eot?65zvnb#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?65zvnb') format('truetype'),
+      url('../fonts/icomoon.woff?65zvnb') format('woff'),
+      url('../fonts/icomoon.svg?65zvnb#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -65,6 +65,12 @@
   }
   .icon-map-marker:before {
     content: "\f041";
+  }
+  .icon-edit:before {
+    content: "\f044";
+  }
+  .icon-pencil-square-o:before {
+    content: "\f044";
   }
   .icon-mail-forward:before {
     content: "\f064";

@@ -99,6 +99,7 @@ header {
     align-items: center;
 
 }
+
 .header__btn-menu {
     display: none;
 }
@@ -151,24 +152,28 @@ header {
         background-color: $tomatto;
     }
 }
+
 .notifacation__menu,
 .message__menu {
     .circle__images {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    overflow: hidden;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        overflow: hidden;
     }
 }
+
 .basket {
     span {
         background-color: $green;
     }
 }
+
 .basket__sum {
     padding: 0px 15px 10px;
     width: 100%;
     text-align: center;
+
     &-title {
         font-size: 16px;
         font-weight: 700;
@@ -179,6 +184,7 @@ header {
         padding: 13px 22px 13px 11px;
     }
 }
+
 .basket__btn {
     min-width: 105px;
     height: 35px;
@@ -188,6 +194,7 @@ header {
     color: #fff;
     font-size: 14px;
     font-weight: 700;
+
     &-checkout {
         padding: 0px 13px;
         background-color: $red;
@@ -213,30 +220,33 @@ header {
         border-bottom: 1px solid rgb(204, 204, 204);
         align-items: center;
         position: relative;
+
         &::before {
             position: absolute;
             top: 28px;
             right: 21px;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
             font-size: 16px;
             color: #b0bec5;
-        } 
+        }
     }
 
     &__images {
         width: 73px;
         height: 57px;
         margin-right: 15px;
+
         img {
             width: 100%;
             height: 100%;
         }
-        
+
     }
 
     &__info {
         font-family: 'Roboto', sans-serif;
         line-height: 1;
+
         &-name {
             font-weight: 500;
             color: $bgdark;
@@ -255,6 +265,7 @@ header {
             color: #000;
             font-weight: 500;
         }
+
         &-data {
             color: #707070;
             font-size: 10px;
@@ -314,6 +325,7 @@ header {
         color: $green;
         line-height: 1;
     }
+
     &__menu {
         border: 1px solid rgb(204, 204, 204);
         background-color: rgb(255, 255, 255);
@@ -322,7 +334,7 @@ header {
         position: absolute;
         top: 90px;
         left: 0px;
-        
+
         padding: 20px 20px 5px;
 
         li {
@@ -338,11 +350,11 @@ header {
 
     }
 }
+
 .notifacation__menu,
 .message__menu,
 .basket__menu,
-.user__menu
- {
+.user__menu {
     position: absolute;
     transform: scale(0);
     transition: all .2s linear;
@@ -350,6 +362,7 @@ header {
     z-index: 2;
 
 }
+
 .user-box:hover .user__menu {
     transform: scale(1);
 }
@@ -358,21 +371,156 @@ header {
 .message-box,
 .notifacation-box,
 .user-box {
-        position: relative;
-        padding: 28px 0px;
-        margin-right: 25px;
-        &:hover .circle__menu {
-            transform: scale(1);
-        }
-        &:hover .header__circle::before {
-            color: $bgdark;
-        }
+    position: relative;
+    padding: 28px 0px;
+    margin-right: 25px;
+    z-index: 6;
+
+    &:hover .circle__menu {
+        transform: scale(1);
+    }
+
+    &:hover .header__circle::before {
+        color: $bgdark;
+    }
 }
+
 .icons-color::before {
     color: $tomatto;
 }
 
 // <---------HEADER-------->
+
+
+// <---------Modal-------->
+#modal {
+    background-color: $green;
+    max-width: 730px;
+    padding: 90px 125px 100px 125px;
+}
+
+.login__title {
+    text-transform: uppercase;
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 40px;
+}
+
+.login__wrapper {
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+
+        input {
+            display: block;
+            background-color: #76ae36;
+            padding-left: 40px;
+            padding-right: 15px;
+            height: 43px;
+            margin-bottom: 8px;
+            border: none;
+            width: 100%;
+            color: #fff;
+
+            &::placeholder {
+                color: #fff;
+                font-size: 14px;
+            }
+        }
+
+        label {
+            position: relative;
+            display: block;
+            width: 100%;
+
+            &::before {
+                position: absolute;
+                font-family: 'icomoon';
+                color: #fff;
+                font-size: 14px;
+                left: 18px;
+                top: 50%;
+                z-index: 3;
+                transform: translate(0,-50%);
+            }
+        }
+
+        .login__label-name {
+            &::before {
+                content: "\f007";
+            }
+        }
+
+        .login__label-pass {
+            &::before {
+                content: "\f023";
+            }
+        }
+        button {
+            margin-top: 12px;
+            max-width: 140px;
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0px 2px 2px 0px rgba(118, 174, 54, 0.75);
+            font-size: 14px;
+            font-weight: 700;
+            text-align: center;
+            text-transform: uppercase;
+            color: #000;
+            padding: 17px 0 14px;
+            margin-right: 10px;
+        }
+        .creat-acc {
+            margin-top: 12px;
+            background-color: #76ae36;
+            color: #fff;
+            font-size: 18px;
+            padding: 11px 0 15px 26px;
+            width: 246px;
+            text-align: center;
+            position: relative;
+            margin-top: 10px;
+
+            &::before {
+                font-family: 'icomoon';
+                content: "\f044";
+                position: absolute;
+                left: 35px;
+                top: 15px;
+                padding-right: 10px;
+                
+            }
+        }
+        .lost-pass {
+            margin-top: 20px;
+            color: #ffffff;
+            font-size: 18px;
+        }
+    }
+}
+.fancybox-button svg {
+    display: none;
+}
+.fancybox-close-small {
+    right: 20px;
+    &::before {
+    font-family: 'icomoon';
+    content: "\f00d";
+    position: absolute;
+    font-size: 18px;
+    color: #fff;
+    right: 20px;
+    }
+}
+
+
+
+
+// <---------Modal-------->
+
 
 // <---------SEARCH-------->
 .search {
@@ -1124,27 +1272,28 @@ header {
 .price-range {
     form {
         padding: 25px 0 20px;
+    }
 
-        button {
-            margin-top: 50px;
-            padding: 16px 10px;
-            background-color: $green;
-            color: #fff;
-            font-weight: 500;
-            position: relative;
-            display: block;
-            width: 100%;
-            text-align: center;
+    button {
+        margin-top: 50px;
+        padding: 16px 10px;
+        background-color: $green;
+        color: #fff;
+        font-weight: 500;
+        position: relative;
+        display: block;
+        width: 100%;
+        text-align: center;
 
-            &::before {
-                font-family: 'icomoon';
-                content: "\f002";
-                position: absolute;
-                left: 60px;
-                top: 50%;
-                transform: translate(0, -50%);
+        &::before {
+            font-family: 'icomoon';
+            content: "\f002";
+            position: absolute;
+            left: 60px;
+            top: 50%;
+            transform: translate(0, -50%);
 
-            }
+
         }
     }
 }
@@ -1445,4 +1594,428 @@ header {
 }
 
 // <---------Product-page End------->
+
+// <---------product-one start------->
+
+.product-one {
+    background-color: $greybg;
+    padding-bottom: 100px;
+
+    &__inner {
+        display: flex;
+    }
+
+    &__content {
+        margin-right: 31px;
+        max-width: 870px;
+        width: 100%;
+    }
+
+    &__images {
+        @include bg;
+        max-width: 829px;
+        height: 422px;
+
+        &-inner {
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid $line;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__title {
+        font-size: 30px;
+        font-weight: 500;
+        color: $bgdark;
+        line-height: 40px;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        font-size: 16px;
+        color: #707070;
+        margin-bottom: 40px;
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+
+    &__link {
+        a {
+            font-size: 16px;
+            font-weight: 500;
+            color: #f4f6f5;
+            padding: 13px 24px 13px 24px;
+
+            &+a {
+                margin-left: 15px;
+            }
+
+            &.screen-btn {
+                padding: 13px 34px 13px 34px;
+            }
+        }
+    }
+
+    &__social {
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            position: relative;
+            width: 54px;
+            height: 50px;
+            color: #fff;
+            font-size: 18px;
+
+            &+a {
+                margin-left: 3px;
+            }
+
+            &::before {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .icon-facebook {
+            background-color: #6370b6;
+        }
+
+        .icon-twitter {
+            background-color: #64b5f6;
+        }
+
+        .icon-linkedin {
+            background-color: #4f71ce;
+        }
+
+        .icon-pinterest-p {
+            background-color: #d32f2f;
+        }
+    }
+
+    &__more {
+        font-size: 18px;
+        font-weight: 500;
+        color: $bgdark;
+    }
+
+    &__content-items {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__content-item {
+        background-color: #fff;
+        max-width: 270px;
+        padding: 0;
+        box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
+        border: none;
+        margin-bottom: 25px;
+    }
+
+    &__item-images {
+        width: 100px;
+        height: 90px;
+        margin-right: 20px;
+    }
+
+    &__info {
+        &-name {
+            font-size: 14px;
+            max-width: 140px;
+            width: 100%;
+        }
+
+        &-price {
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+    }
+}
+
+.live-btn {
+    background-color: $red;
+
+}
+
+.screen-btn {
+    background-color: $bgdark;
+    padding: 13px 34px 13px 34px;
+}
+
+.doc-btn {
+    background-color: $green;
+}
+
+//               tabs
+
+.product-one__tabs {
+    background-color: #fff;
+    border: 1px solid $line;
+    margin-bottom: 50px;
+
+    .tabs {
+        display: flex;
+        border-bottom: 1px solid $line;
+    }
+
+    .tab {
+        width: 25%;
+        padding: 18px;
+        text-align: center;
+        font-size: 16px;
+        color: #70838d;
+        transition: all .2s linear;
+        cursor: pointer;
+
+        &+.tab {
+            border-left: 1px solid $line;
+        }
+
+        &.active {
+            color: $bgdark;
+            font-weight: 500;
+            border-bottom: 3px solid $green;
+        }
+    }
+
+
+    .tab-item {
+
+        display: none;
+        padding: 30px;
+
+        &:first-child {
+            display: flex;
+        }
+
+    }
+
+    .flex {
+        display: flex;
+    }
+
+
+
+    .tab-list {
+        margin-right: 40px;
+
+        li {
+            position: relative;
+            color: #707070;
+            font-size: 16px;
+            margin-bottom: 20px;
+            padding-left: 20px;
+            max-width: 250px;
+
+            &::before {
+                font-family: 'icomoon';
+                content: "\f105";
+                font-size: 16px;
+                color: $green;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translate(0, -50%);
+
+            }
+        }
+
+    }
+}
+
+// ASIDE product one
+
+.price__box {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.price__product {
+    font-size: 22px;
+    font-weight: 500;
+    color: $red;
+
+}
+
+.aside-btn {
+    button {
+        margin-top: 7px;
+        padding: 16px 10px;
+        background-color: $text;
+        color: #fff;
+        font-weight: 500;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
+
+        &::before {
+            color: #fff;
+            font-size: 16px;
+            padding-right: 9px;
+            font-family: 'icomoon';
+
+        }
+    }
+
+    .add-cart {
+        background-color: $green;
+
+        &::before {
+            content: "\f07a";
+        }
+    }
+
+    .add-favorites {
+        background-color: $sky;
+
+        &::before {
+            content: "\f08a";
+        }
+    }
+}
+
+.author {
+
+    &__box {
+        display: flex;
+        margin: 25px 0;
+    }
+
+    &__avatar {
+        width: 73px;
+        height: 63px;
+        margin-right: 13px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__name {
+        font-size: 18px;
+        color: $bgdark;
+        line-height: 1;
+    }
+
+    &__link {
+        font-size: 13px;
+        line-height: 1.2;
+        color: $c70;
+        padding: 5px;
+        min-width: 92px;
+        max-width: 135px;
+        text-align: center;
+        border: 1px solid $line;
+    }
+
+}
+
+.awards-list {
+    display: flex;
+
+    li {
+        width: 34px;
+        height: 37px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &+li {
+            margin-left: 8px;
+        }
+
+        &::before {
+            color: #fff;
+            font-size: 20px;
+        }
+    }
+
+    .icon-meh-o {
+        background-image: url(../images/product-one/awards/orange.png);
+        @include bg;
+
+    }
+
+    .icon-pagelines {
+        background-image: url(../images/product-one/awards/tomatto.png);
+        @include bg;
+    }
+
+    .icon-bolt {
+        background-image: url(../images/product-one/awards/sky.png);
+        @include bg;
+    }
+
+    .icon-foursquare {
+        background-image: url(../images/product-one/awards/green.png);
+        @include bg;
+    }
+
+    .icon-cny {
+        background-image: url(../images/product-one/awards/silver.png);
+        @include bg;
+    }
+}
+
+.aside__sales-item {
+    padding: 20px 25px 20px 28px;
+}
+
+.aside__sales {
+    color: $c70;
+    font-size: 16px;
+
+    span {
+        font-size: 20px;
+        color: $bgdark;
+        font-weight: 700;
+        margin-right: 15px;
+    }
+
+    .icon-shopping-cart {
+        margin-right: 20px;
+
+        &::before {
+            color: #a6b5bb;
+            font-size: 20px;
+        }
+    }
+}
+
+.information__line {
+    margin-top: 20px;
+    font-size: 14px;
+    color: $bgdark;
+    font-weight: 500;
+
+    span {
+        font-weight: 300;
+        color: #70838d;
+    }
+}
+
+// <---------product-one End------->
+
+
+
 @import "_media";
