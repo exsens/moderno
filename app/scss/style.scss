@@ -2245,6 +2245,20 @@ header {
 // <---------contact-page End------->
 
 // <---------settings start------->
+.settings__tabs {
+    span {
+        &::before {
+            font-family: 'icomoon';
+            content: "\f105";
+            font-size: 16px;
+            color: #8bc34a;
+            position: absolute;
+            left: 25px;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+    }
+}
 .settings__tabs.product-one__tabs {
     display: flex;
     border: none;
@@ -2267,18 +2281,6 @@ header {
 
             &+span {
                 border-top: 1px solid $line;
-            }
-
-            &::before {
-                font-family: 'icomoon';
-                content: "\f105";
-                font-size: 16px;
-                color: #8bc34a;
-                position: absolute;
-                left: 25px;
-                top: 50%;
-                transform: translate(0, -50%);
-
             }
         }
 
@@ -2323,14 +2325,15 @@ header {
             width: 100%;
             margin-right: 30px;
             color: #444;
-        
+
         }
 
         form {
             display: flex;
             flex-direction: column;
 
-            input, select {
+            input,
+            select {
                 width: 100%;
             }
 
@@ -2356,6 +2359,200 @@ header {
 }
 
 // <---------settings End------->
+
+// <---------Profile start------->
+.profile-status {
+    border: 1px solid $line;
+    font-size: 13px;
+    color: #70838d;
+    line-height: 26px;
+    padding: 0px 14px 0 26px;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        position: absolute;
+        left: 14px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.profile-on {
+    &::before {
+        background-color: $green;
+    }
+}
+
+.profile-off {
+    &::before {
+        background-color: $red;
+    }
+}
+
+.profile__aside {
+    max-width: 270px;
+    margin-right: 30px;
+
+    .aside__item {
+        margin-bottom: 35px;
+    }
+
+    .footer__social-list {
+        margin-bottom: 23px;
+    }
+}
+
+.profile__aside .aside-btn {
+    font-size: 16px;
+
+    .add-cart {
+        font-weight: 700;
+        margin-top: 15px;
+        margin-bottom: 30px;
+
+        &::before {
+            content: "";
+        }
+    }
+
+    .send-mess {
+        &::before {
+            content: "\f003";
+            font-family: 'icomoon';
+        }
+    }
+}
+
+.profile {
+    &__inner {
+        display: flex;
+    }
+
+    &__content {
+        width: 100%;
+    }
+
+    &__banner {
+        @include bg;
+        height: 330px;
+        width: 829px;
+
+        &-wrapper {
+            margin-bottom: 22px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        background-color: #fff;
+        border: 1px solid $line;
+    }
+
+    &__item {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        padding: 15px;
+
+        &+& {
+            border-left: 1px solid $line;
+        }
+
+        &-desc {
+            font-weight: 500;
+            color: $bgdark;
+
+        }
+
+        &-info {
+            color: $c70;
+        }
+
+        &-total {
+            color: #000;
+        }
+
+    }
+
+    .rate-star {
+        margin-right: 0;
+    }
+}
+
+
+.personal__box {
+    padding: 35px 40px;
+}
+
+.personal__title {
+    font-size: 20px;
+    font-weight: 700;
+    color: $bgdark;
+
+}
+
+.personal__text {
+    color: $c70;
+    margin-bottom: 35px;
+}
+
+.personal {
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        margin: 17px 0 15px;
+        font-size: 16px;
+        color: $bgdark;
+
+
+        h4 {
+            font-weight: 500;
+            font-style: italic;
+
+        }
+    }
+
+    &__number {
+        font-weight: 700;
+    }
+
+    &__line {
+            border-radius: 4px;
+            background-color: rgb(244, 244, 244);        
+            height: 15px;
+            width: 100%;
+            margin-bottom: 20px;
+            span {
+                display: block;
+                border-radius: 4px;
+                height: 15px;
+                background-image: url(../images/proggresline.jpg);
+                background-repeat: repeat;
+            }
+          }
+          
+    }
+    .profile .settings__tabs.product-one__tabs .tabs span{
+        font-family: 'Roboto', sans-serif;
+    }
+    .profile .settings__tabs span::before {
+        color: $c70;
+        top: 46%;
+        left: 22px;
+    }
+    .profile .settings__tabs .active::before {
+        color: $green;
+    }
+
+// <---------Profile End------->
 
 
 
