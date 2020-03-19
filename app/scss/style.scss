@@ -444,7 +444,7 @@ header {
                 left: 18px;
                 top: 50%;
                 z-index: 3;
-                transform: translate(0,-50%);
+                transform: translate(0, -50%);
             }
         }
 
@@ -459,6 +459,7 @@ header {
                 content: "\f023";
             }
         }
+
         button {
             margin-top: 12px;
             max-width: 140px;
@@ -473,6 +474,7 @@ header {
             padding: 17px 0 14px;
             margin-right: 10px;
         }
+
         .creat-acc {
             margin-top: 12px;
             background-color: #76ae36;
@@ -491,9 +493,10 @@ header {
                 left: 35px;
                 top: 15px;
                 padding-right: 10px;
-                
+
             }
         }
+
         .lost-pass {
             margin-top: 20px;
             color: #ffffff;
@@ -501,18 +504,21 @@ header {
         }
     }
 }
+
 .fancybox-button svg {
     display: none;
 }
+
 .fancybox-close-small {
     right: 20px;
+
     &::before {
-    font-family: 'icomoon';
-    content: "\f00d";
-    position: absolute;
-    font-size: 18px;
-    color: #fff;
-    right: 20px;
+        font-family: 'icomoon';
+        content: "\f00d";
+        position: absolute;
+        font-size: 18px;
+        color: #fff;
+        right: 20px;
     }
 }
 
@@ -2015,7 +2021,7 @@ header {
 }
 
 // <---------product-one End------->
-  
+
 // <---------page-404 start------->
 .page-404 {
     &__wrapper {
@@ -2023,6 +2029,7 @@ header {
         border-bottom: none;
         margin-bottom: 150px;
     }
+
     &__top {
         padding: 0 28px;
         min-height: 70px;
@@ -2034,6 +2041,7 @@ header {
         align-items: center;
         background-color: #fff;
     }
+
     &__content {
         padding: 110px 0 100px;
         background-color: $green;
@@ -2041,6 +2049,7 @@ header {
         font-family: 'Open-sans', sans-serif;
         color: #fff;
     }
+
     &__title {
         font-size: 300px;
         line-height: 1;
@@ -2054,12 +2063,14 @@ header {
         margin: 0 auto 25px;
 
     }
+
     &__subtitle {
         font-size: 30px;
         letter-spacing: 5px;
         max-width: 500px;
         margin: 0 auto 25px;
     }
+
     &__text {
         font-family: 'Raleway', sans-serif;
         text-align: center;
@@ -2068,6 +2079,7 @@ header {
         max-width: 535px;
         margin: 0 auto 55px;
     }
+
     &__link {
         border: 2px solid #fff;
         border-radius: 4px;
@@ -2085,16 +2097,19 @@ header {
     &__wrapper {
         border-bottom: 1px solid $line;
     }
+
     &__content {
         background-color: #fff;
         padding: 40px 50px;
     }
+
     &__title {
         font-size: 20px;
         font-weight: 700;
         color: #444;
 
     }
+
     &__text {
         color: $c70;
         font-size: 15px;
@@ -2105,6 +2120,126 @@ header {
 }
 
 // <---------About-page End------->
+
+// <---------contact-page start------->
+.contact-page {
+
+    &__wrapper {
+        border-bottom: 1px solid $line;
+        background-color: #fff;
+    }
+
+    &__content {
+        padding: 40px 40px 0px;
+
+    }
+
+    &__top {
+        padding: 0 40px;
+    }
+
+    &__map {
+        margin-bottom: 50px;
+
+        iframe {
+            width: 100%;
+        }
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__info {
+        max-width: 275px;
+
+        &-item {
+            padding-left: 40px;
+            margin-bottom: 30px;
+        }
+
+        &-title {
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            position: relative;
+            margin-bottom: 50px;
+            font-weight: 500;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 44px;
+                height: 4px;
+                background-color: $green;
+                left: 0;
+                top: 35px
+            }
+
+            &::before {
+                font-family: 'icomoon';
+                color: $green;
+                font-size: 24px;
+                position: absolute;
+                left: -40px;
+
+
+            }
+        }
+
+        &-text {
+            color: $c70;
+        }
+    }
+
+    &__form {
+        &-title {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        &-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+
+            input {
+                height: 42px;
+                width: 350px;
+
+                &+input {
+                    margin-left: 25px;
+                }
+            }
+        }
+
+        textarea {
+            min-height: 190px;
+            background-color: #f1f4f5;
+            color: #7a7a7a;
+            display: block;
+            width: 100%;
+            border: none;
+            padding: 13px 17px;
+            resize: none;
+            margin-bottom: 20px;
+            &::placeholder {
+                color: #7a7a7a;
+            }
+        }
+
+        button {
+            display: block;
+            padding: 19px 40px;
+            background-color: #8bc34a;
+            color: #fff;
+            font-weight: 700;
+            text-align: center;
+        }
+    }
+}
+
+// <---------contact-page End------->
 
 
 
