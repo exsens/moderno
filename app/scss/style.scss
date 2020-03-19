@@ -1773,6 +1773,7 @@ header {
     .tabs {
         display: flex;
         border-bottom: 1px solid $line;
+        height: 100%;
     }
 
     .tab {
@@ -2206,6 +2207,7 @@ header {
             input {
                 height: 42px;
                 width: 350px;
+                border: none;
 
                 &+input {
                     margin-left: 25px;
@@ -2223,6 +2225,7 @@ header {
             padding: 13px 17px;
             resize: none;
             margin-bottom: 20px;
+
             &::placeholder {
                 color: #7a7a7a;
             }
@@ -2240,6 +2243,119 @@ header {
 }
 
 // <---------contact-page End------->
+
+// <---------settings start------->
+.settings__tabs.product-one__tabs {
+    display: flex;
+    border: none;
+    background-color: transparent;
+
+    .tabs {
+        display: flex;
+        flex-direction: column;
+        min-width: 270px;
+        margin-right: 30px;
+        border: 1px solid $line;
+        background-color: #fff;
+
+        span {
+            width: 100%;
+            padding: 17px 50px;
+            text-align: left;
+            position: relative;
+            border-left: none;
+
+            &+span {
+                border-top: 1px solid $line;
+            }
+
+            &::before {
+                font-family: 'icomoon';
+                content: "\f105";
+                font-size: 16px;
+                color: #8bc34a;
+                position: absolute;
+                left: 25px;
+                top: 50%;
+                transform: translate(0, -50%);
+
+            }
+        }
+
+        .tab {
+            font-size: 14px;
+            font-weight: 500;
+            color: $c70;
+
+            &.active {
+                color: #263238;
+                border-bottom: 3px solid #8bc34a;
+            }
+        }
+    }
+
+    .tab_content {
+        width: 100%;
+        background-color: #fff;
+        border: 1px solid $line;
+    }
+
+    .tab-item {
+        padding: 0;
+    }
+}
+
+.page-box {
+    width: 100%;
+
+    &__title {
+        width: 100%;
+        border-bottom: 1px solid $line;
+        padding: 30px;
+
+    }
+
+    &__content {
+        padding: 35px;
+
+        &-desc {
+            max-width: 225px;
+            width: 100%;
+            margin-right: 30px;
+            color: #444;
+        
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+
+            input, select {
+                width: 100%;
+            }
+
+            button {
+                padding: 10px 30px;
+                background-color: #8bc34a;
+                color: #fff;
+                font-weight: 500;
+                text-align: center;
+                max-width: 110px;
+                margin-right: auto;
+            }
+        }
+
+        &-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+
+        }
+    }
+}
+
+// <---------settings End------->
 
 
 
