@@ -2555,6 +2555,112 @@ header {
 // <---------Profile End------->
 
 
+// <---------upload start------->
+    .upload {
+        &__wrapper {
+        background-color: #fff;
+        }
+        &__content {
+            padding: 40px;
+        }
+        &__line {
+            display: flex;
+            margin-bottom: 20px;
+            label {
+                max-width: 160px;
+                width: 100%;
+                margin-right: 15px;
+                color: #444;
+                line-height: 40px;
+                span {
+                    color: $green;
+                }
+            }
+            input, textarea, select{
+                width: 100%;
+                line-height: 40px;
+            }
+            .input__wrapper {
+
+                width: 100%;
+            }
+            textarea {
+                resize: none;
+                min-height: 150px;
+                line-height: 1.1;
+                padding-top: 12px;
+               
+            }
+            button {
+                padding: 10px 30px;
+                background-color: #8bc34a;
+                color: #fff;
+                font-weight: 500;
+                text-align: center;
+                max-width: 110px;
+                margin-top: 40px;
+               
+            }
+        }
+        .jq-selectbox, .jq-file{
+            width: 100%;
+        }
+        .jq-selectbox__select, .jq-file__name {
+            padding: 0 15px;
+            height: 40px;
+        }
+        .jq-selectbox__select, .jq-selectbox__dropdown, .jq-file__name,.jq-file__browse  {
+            background: #f1f4f5;
+            color: $c70;
+            border: 1px solid $line;
+            box-shadow: none;
+            text-shadow: none;
+            line-height: 40px;
+            border-radius: 0;
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+            li {
+                color: $c70;
+                height: 40px;
+                line-height: 40px;
+            }
+        }
+        .jq-selectbox__trigger {
+            border-left: none;
+
+        }
+        .jq-selectbox__trigger-arrow {
+            border: none;
+            top: 0;
+            right: 20px;
+            transform: translate(50%, -50%);
+            &::before {
+                font-family: 'icomoon';
+                content: "\f0d7"
+            }
+
+        }
+        .jq-file__name {
+            padding-left: 113px;
+
+        }
+        .jq-file {
+            border-radius: 0;
+        }
+        .jq-file__browse {
+            left: 9px;
+            top: 8px;
+            max-width: 89px;
+            height: 26px;
+            line-height: 26px;
+            background-color: #fff;
+        }
+        .jq-selectbox__trigger-arrow {
+            
+        }
+    }
+    
+// <---------upload End------->
 
 
 
