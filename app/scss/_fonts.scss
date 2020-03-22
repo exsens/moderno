@@ -1,0 +1,176 @@
+@font-face {
+    font-family: "Roboto-Regular", sans-serif;
+
+    src: url("../fonts/Roboto-Regular.woff2") format("woff2"),
+           url("../fonts/Roboto-Regular.woff") format("woff");
+
+           font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+   }
+
+   @font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?65zvnb');
+    src:  url('../fonts/icomoon.eot?65zvnb#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?65zvnb') format('truetype'),
+      url('../fonts/icomoon.woff?65zvnb') format('woff'),
+      url('../fonts/icomoon.svg?65zvnb#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-search:before {
+    content: "\f002" !important;
+  }
+  .icon-envelope-o:before {
+    content: "\f003" !important;
+  }
+  .icon-user:before {
+    content: "\f007" !important;
+  }
+  .icon-th-large:before {
+    content: "\f009"!important;
+  }
+  .icon-th-list:before {
+    content: "\f00b"!important;
+  }
+  .icon-close:before {
+    content: "\f00d"!important;
+  }
+  .icon-remove:before {
+    content: "\f00d"!important;
+  }
+  .icon-times:before {
+    content: "\f00d"!important;
+  }
+  .icon-lock:before {
+    content: "\f023"!important;
+  }
+  .icon-map-marker:before {
+    content: "\f041"!important;
+  }
+  .icon-edit:before {
+    content: "\f044"!important;
+  }
+  .icon-pencil-square-o:before {
+    content: "\f044"!important;
+  }
+  .icon-mail-forward:before {
+    content: "\f064"!important;
+  }
+  .icon-share:before {
+    content: "\f064"!important;
+  }
+  .icon-shopping-cart:before {
+    content: "\f07a"!important;
+  }
+  .icon-heart-o:before {
+    content: "\f08a"!important;
+  }
+  .icon-phone:before {
+    content: "\f095"!important;
+  }
+  .icon-twitter:before {
+    content: "\f099"!important;
+  }
+  .icon-facebook:before {
+    content: "\f09a"!important;
+  }
+  .icon-facebook-f:before {
+    content: "\f09a"!important;
+  }
+  .icon-bell-o:before {
+    content: "\f0a2"!important;
+  }
+  .icon-briefcase:before {
+    content: "\f0b1"!important;
+  }
+  .icon-group:before {
+    content: "\f0c0"!important;
+  }
+  .icon-users:before {
+    content: "\f0c0"!important;
+  }
+  .icon-caret-down:before {
+    content: "\f0d7"!important;
+  }
+  .icon-sort:before {
+    content: "\f0dc"!important;
+  }
+  .icon-unsorted:before {
+    content: "\f0dc"!important;
+  }
+  .icon-linkedin:before {
+    content: "\f0e1"!important;
+  }
+  .icon-comment-o:before {
+    content: "\f0e5"!important;
+  }
+  .icon-comments-o:before {
+    content: "\f0e6"!important;
+  }
+  .icon-bolt:before {
+    content: "\f0e7"!important;
+  }
+  .icon-flash:before {
+    content: "\f0e7"!important;
+  }
+  .icon-angle-right:before {
+    content: "\f105"!important;
+  }
+  .icon-angle-down:before {
+    content: "\f107"!important;
+  }
+  .icon-mail-reply:before {
+    content: "\f112"!important;
+  }
+  .icon-reply:before {
+    content: "\f112"!important;
+  }
+  .icon-meh-o:before {
+    content: "\f11a"!important;
+  }
+  .icon-location-arrow:before {
+    content: "\f124"!important;
+  }
+  .icon-cny:before {
+    content: "\f157"!important;
+  }
+  .icon-jpy:before {
+    content: "\f157"!important;
+  }
+  .icon-rmb:before {
+    content: "\f157"!important;
+  }
+  .icon-yen:before {
+    content: "\f157"!important;
+  }
+  .icon-sort-amount-desc:before {
+    content: "\f161"!important;
+  }
+  .icon-foursquare:before {
+    content: "\f180"!important;
+  }
+  .icon-pagelines:before {
+    content: "\f18c"!important;
+  }
+  .icon-pinterest-p:before {
+    content: "\f231"!important;
+  }
