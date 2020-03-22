@@ -16,6 +16,32 @@ $(function(){
         arrows: false,
         dots: true,
         dotsClass: 'products__slider-dots',
+        responsive: [
+            {
+              breakpoint: 1901,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                
+              }
+            },
+            {
+              breakpoint: 1441,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 821,
+              settings: {
+                dots: false,
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            },
+            
+          ]
       });
       
       $(".js-range-slider").ionRangeSlider({
@@ -40,10 +66,7 @@ $(function(){
 
     });
 
-    // $('.brg-menu').click(function(event){
-    //     $('.brg-menu').toggleClass('active')
-    //     $('.nav-menu__list').toggleClass('active')
-    // });
+   
     $('.brg-menu').on('click', function(){
         $('.nav-menu__list').addClass('active');
         $('.brg-menu--close').addClass('active');
